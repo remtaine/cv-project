@@ -1,24 +1,56 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import GeneralInfo from "./components/GeneralInfo";
-import Education from "./components/Education";
-import Work from "./components/Work";
 import Separator from "./components/UI/Separator";
+import Form from "./components/Form";
+import uniqid from "uniqid";
+
 
 function App() {
+
+  const GenInfoData = [
+    {
+      title:"Name",
+      placeholder:"John Smith",
+      id: uniqid(),
+    },
+    {
+      title:"Job",
+      placeholder:"Fireman",
+      id: uniqid(),
+    },
+  ];
+
+  const EducationData = [
+    {
+      title:"Name",
+      placeholder:"John Smith",
+      id: uniqid(),
+    },
+    {
+      title:"Job",
+      placeholder:"Fireman",
+      id: uniqid(),
+    },
+  ];
+
   return (
     <div className="App min-h-screen bg-slate-800 text-slate-900 flex justify-center selection:bg-slate-800 selection:text-slate-50">
-      <section className="w-screen md:w-[700px] bg-slate-50 min-h-screen shadow-lg px-8 py-4">
+      <section className="w-screen max-w-xl bg-slate-200 min-h-screen shadow-lg px-8 pt-4 pb-2">
         <Header />
+
         <Separator />
-        <GeneralInfo />
-        <Education />
-        <Work />
+        
+        <Form title="General Info" data={GenInfoData}/>
+        <Form title="Education" />
+        <Form title="Work Experience" />
+
         <Separator />
+
         <Footer />
       </section>
     </div>
   );
 }
+
 
 export default App;
