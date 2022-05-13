@@ -10,16 +10,16 @@ function Form(props) {
     // }
 
     return (
-        <div className="">
-            <h2 className='text-lg font-semibold'>{title}</h2>
-            <form action="" className="">
+        <div className="mb-4">
+            <h2 className='text-lg font-semibold mb-2'>{title}</h2>
+            <form action="" className="flex flex-col gap-1 max-w-">
 
                 {data.map(function(datum) {
                     const {title, placeholder, id} = datum;
                     return (
-                        <div className="" key={id}>
-                            <label htmlFor={title} className="">{title}: </label>
-                            <input type="text" id={title} placeholder={placeholder}/>
+                        <div className="flex gap-2 flex-col sm:flex-row" key={id}>
+                            <label htmlFor={title} className="py-1">{title}: </label>
+                            <input type="text" id={title} placeholder={placeholder} className="shadow px-2 rounded-sm max-w-full"/>
                         </div>
                     );
                 })}
