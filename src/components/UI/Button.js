@@ -9,7 +9,9 @@ function Button(props) {
     )
 }
 
-Button.propTypes = {}
+Button.propTypes = {
+    text: PropTypes.string,
+}
 
 Button.defaultProps = {
     text: "Button",
