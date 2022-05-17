@@ -19,7 +19,7 @@ function Form(props) {
                     return (
                         <div className="flex gap-3 flex-col sm:flex-row" key={id}>
                             <label htmlFor={title} className="py-1 whitespace-nowrap">{title}: </label>
-                            <input type="text" id={title} placeholder={placeholder} className="shadow px-2 rounded-sm w-full"/>
+                            <input type="text" id={title} placeholder={placeholder} className="shadow px-2 rounded-sm w-full" />
                         </div>
                     );
                 })}
