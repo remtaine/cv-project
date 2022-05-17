@@ -25,6 +25,11 @@ function App() {
       id: uniqid(),
     },
     {
+      title:"Address",
+      placeholder:"123 Street, City, State 12345",
+      id: uniqid(),
+    },
+    {
       title:"Email",
       placeholder:"abc@gmail.com",
       id: uniqid(),
@@ -36,10 +41,23 @@ function App() {
     },
   ];
 
+  const SkillsData = [
+    {
+      title:"Skills",
+      placeholder:"Skill 1, Skill 2, ...",
+      id: uniqid(),
+    },
+  ]
+
   const EducationData = [
     {
       title:"School",
       placeholder:"Harvard University",
+      id: uniqid(),
+    },
+    {
+      title:"Location",
+      placeholder:"United Kingdom",
       id: uniqid(),
     },
     {
@@ -57,12 +75,22 @@ function App() {
       placeholder:"2020",
       id: uniqid(),
     },
+    {
+      title:"Description",
+      placeholder:"Reached Summa Cum Laude",
+      id: uniqid(),
+    },
   ];
 
   const WorkData = [
     {
       title:"Company",
       placeholder:"JP Morgan",
+      id: uniqid(),
+    },
+    {
+      title:"Location",
+      placeholder:"United Kingdom",
       id: uniqid(),
     },
     {
@@ -80,6 +108,29 @@ function App() {
       placeholder:"Present",
       id: uniqid(),
     },
+    {
+      title:"Description",
+      placeholder:"best number cruncher in the region",
+      id: uniqid(),
+    },
+  ];
+
+  const AwardsData = [
+    {
+      title:"Award",
+      placeholder:"Nobel Prize",
+      id: uniqid(),
+    },
+    {
+      title:"Date",
+      placeholder:"2020",
+      id: uniqid(),
+    },
+    {
+      title:"Description",
+      placeholder:"Brought peace to the region",
+      id: uniqid(),
+    },
   ];
 
   return (
@@ -89,14 +140,20 @@ function App() {
 
         <Separator />
         <Step text="Step 1: Fill Out Details" />
+        {/* <h2 className='text-lg font-semibold my-2'>General Info</h2> */}
         <Form title="General Info" data={GenInfoData}/>
-        <h2 className='text-lg font-semibold my-2'>Education</h2>
+        {/* <h2 className='text-lg font-semibold my-2'>Skills</h2> */}
+        <Form title="Skills" data={SkillsData}/>
+        <h2 className='text-lg font-semibold mb-2'>Education</h2>
+        {/* <Form title="Education" data={EducationData} /> */}
         <Button text={"Add"}/>
         <h2 className='text-lg font-semibold my-2'>Work Experience</h2>
+        {/* <Form title="Work Experience" data={WorkData} /> */}
+        <Button text={"Add"}/>
+        <h2 className='text-lg font-semibold my-2'>Awards</h2>
+        {/* <Form title="Awards" data={AwardsData} /> */}
         <Button text={"Add"}/>
 
-        {/* <Form title="Education" data={EducationData} /> */}
-        {/* <Form title="Work Experience" data={WorkData} /> */}
 
         <Separator />
 
@@ -109,7 +166,7 @@ function App() {
 
         <Separator />
 
-        <Step text="Step 3: Check Details" />
+        <Step text="Step 3: Check Form" />
           <h3 className="mt-3 flex justify-center italic font-bold text-center">Please do the first two steps!</h3>
         <Separator />
 
